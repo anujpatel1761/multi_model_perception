@@ -1,4 +1,3 @@
-```markdown
 # LiDAR-Camera Fusion for 3D Object Detection in Autonomous Vehicles  
 **Real-Time Mid-Level Sensor Fusion for Enhanced Perception**  
 
