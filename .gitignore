@@ -1,0 +1,52 @@
+# Ignore all data subfolders (massive files)
+data/bounding_box/
+data/camera/
+data/camera_calibration/
+data/lidar/
+data/**/training/
+data/**/testing/
+data/**/velodyne/
+data/**/image_3/
+data/**/label_2/
+data/**/calib/
+
+# Allow data scripts or metadata files if needed
+!data/**/*.py
+!data/.gitignore
+!data/object\ development\ kit/**
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.npz
+*.h5
+
+# Virtual environments
+.venv/
+venv/
+.reinforcement_learning/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# If you don't want to track YOLOv5's internal .git
+yolov5/.git/
+
+# Ignore weights if added later
+*.pt
+*.weights
