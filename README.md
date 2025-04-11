@@ -147,7 +147,3 @@ These detections benefit from the enhanced representations provided by the fusio
 - KITTI Dataset for providing the benchmark data
 - YOLOv5 for object detection implementation
 - PyTorch and torchvision for deep learning components
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
