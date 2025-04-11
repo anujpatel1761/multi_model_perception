@@ -52,22 +52,22 @@ Object detection results show improved performance when using fused features:
 *YOLO detection results on a different frame, showing pedestrians, bicycles, and other objects*
 
 ## Project Structure
+
+```
 multi_model_perception/
-│
 ├── data/                           ← KITTI dataset folder
-│
 ├── src/
 │   ├── dataset.py                  ← Dataset loading and processing
 │   ├── calibration_utils.py        ← Sensor calibration utilities
 │   ├── feature_extraction.py       ← Feature extraction from both modalities
 │   ├── fusion.py                   ← Various fusion strategies
 │   └── visualization.py            ← Visualization utilities
-│
 ├── run_pipeline.py                 ← Main entry point script
 ├── test_fusion.py                  ← Fusion testing script
 ├── test_feature_extraction.py      ← Feature extraction testing
 ├── test_calibration.py             ← Calibration testing
 └── requirements.txt                ← Dependencies
+```
 
 ## Installation
 
