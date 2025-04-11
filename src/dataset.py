@@ -136,9 +136,17 @@ class KittiDataset:
         # Parse the calibration data
         calib_data = {}
         for line in lines:
-            key, value = line.split(':', 1)
-            # Convert matrix strings to numpy arrays
-            calib_data[key] = np.array([float(x) for x in value.split()])
+            line = line.strip()
+            if line == '' or ':' not in line:
+                continue
+                
+            try:
+                key, value = line.split(':', 1)
+                # Convert matrix strings to numpy arrays
+                calib_data[key] = np.array([float(x) for x in value.split()])
+            except Exception as e:
+                print(f"Warning: Could not parse calibration line: {line}")
+                continue
         
         # Reshape matrices
         if 'P0' in calib_data:  # Camera projection matrices
@@ -157,7 +165,7 @@ class KittiDataset:
             calib_data['Tr_imu_to_velo'] = calib_data['Tr_imu_to_velo'].reshape(3, 4)
             
         return calib_data
-    
+        
     def load_labels(self, frame_id):
         """
         Load object labels for a specific frame (only for training split)

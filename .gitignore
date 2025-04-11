@@ -24,9 +24,15 @@ __pycache__/
 *.npz
 *.h5
 
+# Result files that might be large
+results/
+*.npy
+*.bin
+
 # Virtual environments
 .venv/
 venv/
+env/
 .reinforcement_learning/
 
 # Jupyter Notebook checkpoints
@@ -35,18 +41,34 @@ venv/
 # IDE / editor settings
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS generated files
 .DS_Store
 Thumbs.db
+desktop.ini
+.directory
 
 # Logs and temp files
 *.log
 *.tmp
 
-# If you don't want to track YOLOv5's internal .git
+# If you don't want to track YOLOv5's internal files
 yolov5/.git/
+yolov5/.github/
 
-# Ignore weights if added later
+# Model weights
 *.pt
 *.weights
+*.onnx
+*.tflite
+*.tfrecord
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Temporary matplotlib figures
+*.png
